@@ -199,20 +199,25 @@ console.log(completeCourseItem);
 //---------------------- ARREGLOS ----------------------------------
 
 
-// Lista de categorías de cursos
-let categories = ["Frontend", "Backend", "Mobile", "Data Science"];
+const courses = [
+    {
+        name: "Frontend Development",
+        instructor: "Ana",
+        duration: "8 horas"
+    },
+    {
+        name: "Backend Development",
+        instructor: "Carlos",
+        duration: "10 horas"
+    }
+];
 
-// Agregar un nuevo elemento
-categories.push("DevOps");
+const coursesBDD = courses.map((course) => {
+    return {
+        name: course.name.toUpperCase(),
+        instructor: course.instructor.toUpperCase(),
+        duration: course.duration
+    };
+});
 
-// Ver la longitud del arreglo
-console.log(categories.length);
-
-// Iterar sobre el arreglo
-categories.forEach(category => console.log(category));
-
-// Filtrar los cursos de Frontend
-let frontendCourses = categories.filter(category => category === "Frontend");
-
-console.log(frontendCourses);
-
+console.log(coursesBDD);
