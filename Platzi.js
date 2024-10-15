@@ -194,3 +194,25 @@ const exclusiveContent = {
 const completeCourseItem = { ...featuredCourseItem, ...exclusiveContent };
 
 console.log(completeCourseItem);
+
+
+//---------------------- ARREGLOS ----------------------------------
+
+
+// Lista de categorías de cursos
+let categories = ["Frontend", "Backend", "Mobile", "Data Science"];
+
+// Agregar un nuevo elemento
+categories.push("DevOps");
+
+// Ver la longitud del arreglo
+console.log(categories.length);
+
+// Iterar sobre el arreglo
+categories.forEach(category => console.log(category));
+
+// Filtrar los cursos de Frontend
+let frontendCourses = categories.filter(category => category === "Frontend");
+
+console.log(frontendCourses);
+
